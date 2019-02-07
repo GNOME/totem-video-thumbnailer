@@ -1,0 +1,3 @@
+[submodule "subprojects/totem"]
+	path = subprojects/totem
+	url = https://gitlab.gnome.org/GNOME/totem.git
