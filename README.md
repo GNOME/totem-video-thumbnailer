@@ -1,4 +1,4 @@
-#totem-video-thumbnailer
+# totem-video-thumbnailer
 
 A module to help build GNOME Videos' thumbnailer without having to
 think too hard about build systems.
