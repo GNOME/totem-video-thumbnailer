@@ -40,10 +40,10 @@ configure_file(
 )
 
 totem_video_thumbnailer_sources = files(
-  'subprojects/totem/src/totem-resources.c',
-  'subprojects/totem/src/totem-video-thumbnailer.c',
-  'subprojects/totem/src/gst/totem-gst-helpers.c',
-  'subprojects/totem/src/gst/totem-gst-pixbuf-helpers.c'
+  'submodules/totem/src/totem-resources.c',
+  'submodules/totem/src/totem-video-thumbnailer.c',
+  'submodules/totem/src/gst/totem-gst-helpers.c',
+  'submodules/totem/src/gst/totem-gst-pixbuf-helpers.c'
 )
 
 totem_video_thumbnailer_deps = [
@@ -59,8 +59,8 @@ executable(
   'totem-video-thumbnailer',
   totem_video_thumbnailer_sources,
   include_directories: [
-    include_directories('subprojects/totem/src/'),
-    include_directories('subprojects/totem/src/gst'),
+    include_directories('submodules/totem/src/'),
+    include_directories('submodules/totem/src/gst'),
   ],
   dependencies: totem_video_thumbnailer_deps,
   c_args: [
@@ -70,8 +70,8 @@ executable(
   install_dir: totem_bindir
 )
 
-thumbnailer_sh = find_program('subprojects/totem/data/thumbnailer.sh')
-mime_type_list = files('subprojects/totem/data/mime-type-list.txt')
+thumbnailer_sh = find_program('submodules/totem/data/thumbnailer.sh')
+mime_type_list = files('submodules/totem/data/mime-type-list.txt')
 
 r = run_command(thumbnailer_sh, mime_type_list)
 
@@ -82,7 +82,7 @@ thumbnailer_conf.set('MIME_TYPE', r.stdout().strip())
 thumbnailer = 'totem.thumbnailer'
 
 configure_file(
-  input: 'subprojects/totem/data/' + thumbnailer + '.in',
+  input: 'submodules/totem/data/' + thumbnailer + '.in',
   output: thumbnailer,
   install: true,
   install_dir: join_paths(totem_datadir, 'thumbnailers'),
