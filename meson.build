@@ -3,7 +3,7 @@ project(
   version: '1.0',
   license: 'GPL2+ with exception',
   default_options: 'buildtype=debugoptimized',
-  meson_version: '>= 0.43.0'
+  meson_version: '>= 0.50.0'
 )
 
 totem_prefix = get_option('prefix')
