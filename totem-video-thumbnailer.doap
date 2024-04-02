@@ -6,7 +6,7 @@
 	<name xml:lang="en">totem-video-thumbnailer</name>
 	<description xml:lang="en">Video thumbnailer for embedded uses</description>
 	<shortdesc xml:lang="en">Video thumbnailer for embedded uses</shortdesc>
-	<homepage rdf:resource="https://wiki.gnome.org/Apps/Videos" />
+	<homepage rdf:resource="https://apps.gnome.org/Totem/" />
 	<mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-multimedia" />
 	<download-page rdf:resource="https://gitlab.gnome.org/GNOME/totem-video-thumbnailer" />
 	<bug-database rdf:resource="https://gitlab.gnome.org/GNOME/totem-video-thumbnailer" />
